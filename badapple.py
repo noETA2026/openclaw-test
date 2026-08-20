@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
 """
-player.py
----------
-"SPLIT" という文字列を含む行を区切りとして、
-ASCIIアートのフレーム列をターミナル上でアニメーション再生するプレイヤー。
-
-（例: "$$$$$$$$$$$$$SPLIT$$$$$$$$$$$$$" のような行も区切りとして認識する）
-
 使い方:
     python player.py badapple.txt
     python player.py badapple.txt --fps 15
@@ -17,7 +10,7 @@ import os
 import sys
 import time
 
-CLEAR = "\x1b[H\x1b[2J\x1b[3J"  # カーソルを先頭に戻して画面をクリア（cls呼び出しより高速）
+CLEAR = "\x1b[H\x1b[2J\x1b[3J"
 
 
 def load_frames(path):
